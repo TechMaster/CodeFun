@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 //001
 void soGapDoi()
 {
@@ -18,17 +19,17 @@ void kiemTraSoChinhPhuong()
 {
     int N;
 
-    while (1)
+    while (true)
     {
         printf("Nhap vao mot so de kiem tra. Nhap 0 de thoat\n");
         scanf("%d", &N);
         if (N == 0) return;
-        int laSoChinhPhuong = 0;
+        bool laSoChinhPhuong = false;  //De dung duoc kieu Boolean, phai dung C99 va #include <stdbool.h>
         for (int i = 1; i <= N/2; i++)
         {
             if (N == i * i)
             {
-                laSoChinhPhuong = 1;
+                laSoChinhPhuong = true;
                 break;
             }
         }
