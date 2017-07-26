@@ -35,7 +35,7 @@ void daoMang2() {
 			if (inputText[0] == 'q') break;
 			char * temp;
 			int _val = strtol(inputText, &temp, 10);
-			if (temp[0] == '\0') { //convert successfully
+			if (temp[0] == 0) { //convert successfully
         arr[N] = _val;
         N++;
         if (N == sizeof(arr) / sizeof(arr[0])) {
@@ -57,10 +57,34 @@ void daoMang2() {
 	}
 
 }
+/*
+sourceArray = [1, 2, 3];
+appendArray = [4, 5];
+k = 3
+sourceArray = [1, 2, 3, 4, 5];
+*/
+
+void insertArray(int sourceArray[], int appendArray[], int k) {
+	sourceArray[0] = 100;
+	sourceArray[5] = 1000;
+}
+
+void deleteArray(int sourceArray[], int deletePosition) {
+	//int N =
+
+}
+void demoInsertArray() {
+	int sourceArray[100] = {1, 2, 3};
+	int appendArray[] = {4, 5, 6};
+	insertArray(sourceArray, appendArray, 3);
+	printf("%d\n", sourceArray[0]);
+	printf("%d\n", sourceArray[5]);
+}
 
 int main()
 {
     //daoMang();
-    daoMang2();
+    //daoMang2();
+    demoInsertArray();
     return 0;
 }
