@@ -1,0 +1,6 @@
+#ifndef CUONG_H_INCLUDED
+#define CUONG_H_INCLUDED
+
+#define PI 3.14156
+
+#endif // CUONG_H_INCLUDED
