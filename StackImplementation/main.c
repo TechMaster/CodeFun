@@ -20,7 +20,7 @@ int main() {
         }
     }
     deleteStack(s);*/
-    char* result = addBigNumber2("11", "23");
+    char* result = addBigNumber2("1", "12345678912345678");
     printf("%s\n", result);
     free(result);
     return 0;

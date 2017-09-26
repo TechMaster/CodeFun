@@ -66,7 +66,7 @@ char * addBigNumber2(char* n1, char* n2) {
     {
         top1 = top1 - 1;
         top2 = top2 - 1;
-        int v1 = 0, v2 = 0;
+        char v1 = 0, v2 = 0;
         if (top1 >= 0)
         {
             v1 = n1[top1] - '0';
@@ -76,19 +76,18 @@ char * addBigNumber2(char* n1, char* n2) {
         {
             v2 = n2[top2] - '0';
         }
-        int temp = v1 + v2 + carry; //tổng của 2 chữ số đồng hạng hệ số
+        char temp = v1 + v2 + carry; //tổng của 2 chữ số đồng hạng hệ số
 
         carry = temp / 10; //nếu tổng hơn 10 thì nhớ sang cột bên cạnh
         temp = temp % 10;
 
-        //push(result, temp); //chồng kết quả lên stack
         count++;
-        result[k - count -1] = temp;
-
+        result[k - count -1] = temp + '0';
     }
+    count = count + 1;//add 1 for last terminated character
 
     char *string = malloc(count * sizeof(char));
-
-    strcpy(string, &result[k - count - 1]);
+    memset(string, 0, count);
+    strcpy(string, &result[k - count]);
     return string;
 }
