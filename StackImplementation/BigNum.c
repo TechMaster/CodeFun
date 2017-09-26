@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "BigNum.h"
-#include "Stack.h"
 
 char* addBigNumber(char* n1, char* n2)
 {
