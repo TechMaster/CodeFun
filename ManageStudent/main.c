@@ -15,10 +15,9 @@ int main() {
     Stack* stack = createStack(40);
     char c, d;
     while (1) {
-        scanf(" %c ",&c);
+        scanf(" %c",&c);
         c = toupper(c);
-
-        //scanf("%c",&d);  //Skip new line
+        scanf("%c",&d);  //Skip new line
 
         switch (c) {
             case 'N': {
