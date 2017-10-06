@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 #include "student.h"
+#include "Stack.h"
 
 int main() {
     printf("Enter your choice\n");
@@ -9,6 +11,7 @@ int main() {
     printf("E. Edit student record\n");
     printf("Q. Quit\n");
 
+    Stack* stack = createStack(40);
     char c;
     while (1) {
         scanf(" %c",&c);
