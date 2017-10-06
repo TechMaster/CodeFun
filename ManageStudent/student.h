@@ -5,9 +5,9 @@
 typedef unsigned char BOOL;
 #define true 1
 #define false 0
-
+#define LENGTH 255
 typedef struct {
-	char name[255];
+	char name[LENGTH];
 	int score;
 	BOOL isMale;
 } Student;
