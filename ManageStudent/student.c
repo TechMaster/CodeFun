@@ -9,6 +9,7 @@ Student* createNewStudentFromConsole() {
 
 	printf("Score:\n");
 	scanf(" %d",&student->score);
+
 	printf("Gender (M for male, else for female):\n");
 	char c;
 	scanf(" %c", &c);

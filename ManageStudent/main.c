@@ -9,22 +9,31 @@ int main() {
     printf("N. Create new student record\n");
     printf("S. Search student by name\n");
     printf("E. Edit student record\n");
+    printf("P. Print all student records\n");
     printf("Q. Quit\n");
 
     Stack* stack = createStack(40);
-    char c;
+    char c, d;
     while (1) {
-        scanf(" %c",&c);
+        scanf(" %c ",&c);
         c = toupper(c);
+
+        //scanf("%c",&d);  //Skip new line
+
         switch (c) {
-            case 'N':
-                printf("You select N\n");
+            case 'N': {
+                Student* student = createNewStudentFromConsole();
+                push(stack, student);
                 break;
+            }
             case 'S':
                 printf("You select S\n");
                 break;
             case 'E':
                 printf("You select E\n");
+                break;
+            case 'P':
+                printf("Print all students\n");
                 break;
             case 'Q':
                 printf("You select Q to quit\n");
